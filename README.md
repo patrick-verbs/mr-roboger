@@ -46,6 +46,7 @@ This project's repository and contained source is available under the MIT Licens
 
 ## <a name="Bugs"></a>Known Bugs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Known Bugs_
+- _rewriteNumberWithDigit(array, targetDigit, newValue)_ will successfully locate digits 1-9 in a number but it will not find 0 if that is passed (numbers have infinite zeroes and I haven't written special casing)
 
 ## <a name="Specs"></a>Test Specs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Specs_
@@ -97,12 +98,6 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
-| __Test:__              | It passes an array to _rewriteNumberWithDigit()_ and returns that function's result. |
-| __Code 1:__            | listCountToInput(11); |
-| __Expected Output 1:__ | [0, "Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] |
-|                        ||
-|                        ||
-|                        ||
 
 | _Describe:_            | _rewriteNumberWithDigit(array)_ |
 |------------------------|--------------|
@@ -122,13 +117,31 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
-| _Describe:_            | _rewriteNumberWithDigit(array)_ |
-|------------------------|--------------|
 | __Test:__              | It changes all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
 | __Code 1:__            | rewriteNumberWithDigit([98, 99, 100, 101]); |
 | __Expected Output 1:__ | [98, 99, "Beep!", "Beep!"] |
 | __Code 2:__            | rewriteNumberWithDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
 | __Expected Output 2:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", "Beep!"] |
+|                        ||
+|                        ||
+|                        ||
+
+| _Describe:_            | _listCountToInput(number)_ |
+|------------------------|--------------|
+| __Test:__              | It passes an array to _rewriteNumberWithDigit()_ and returns that function's result. |
+| __Code 1:__            | listCountToInput(11); |
+| __Expected Output 1:__ | [0, "Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] |
+|                        ||
+|                        ||
+|                        ||
+
+| _Describe:_            | _rewriteNumberWithDigit(array, digit)_ |
+|------------------------|--------------|
+| __Test:__              | It takes additional parameter "digit" and can target digits other than 1. |
+| __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3); |
+| __Expected Output 1:__ | [0, 1, 2, "Beep!"] |
+| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6); |
+| __Expected Output 2:__ | [1, 4, 9, "Beep!", 25, "Beep!", 49, "Beep!", 81, 100] |
 |                        ||
 |                        ||
 |                        ||

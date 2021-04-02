@@ -11,11 +11,11 @@ function listCountToInput(number) {
     }
     listedCount.push(integer)
   }
-  listedCount = rewriteNumberWithDigit(listedCount)
+  listedCount = rewriteNumberWithDigit(listedCount, 1)
   return listedCount
 }
 
-function rewriteNumberWithDigit(array) {
+function rewriteNumberWithDigit(array, targetDigit) {
   if (Array.isArray(array) === false) {
     return -1
   } else {
@@ -24,7 +24,7 @@ function rewriteNumberWithDigit(array) {
       while (reducedNum > 0) {
         const oneTenthOfNum = (reducedNum / 10).toFixed(1)// toFixed() prevents floating point errors on decimals
         const thisDigit = 10 * ( oneTenthOfNum - Math.floor(oneTenthOfNum) ).toFixed(1)
-        if (thisDigit === 1) {
+        if (thisDigit === targetDigit) {
           array[i] = "Beep!"
           break// No need to finish while-loop once a "1" is found
         }
