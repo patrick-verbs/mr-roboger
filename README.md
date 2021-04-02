@@ -98,6 +98,24 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 
+| _Describe:_            | _beepWriter(array)_ |
+|------------------------|--------------|
+| __Test:__              | It returns an input array. |
+| __Code 1:__            | beepWriter([1, 2, 3]); |
+| __Expected Output 1:__ | [1, 2, 3] |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It returns -1 if passed no argument, or an argument that is not an array. |
+| __Code 1:__            | beepWriter(); |
+| __Expected Output 1:__ | -1 |
+| __Code 2:__            | beepWriter(10); |
+| __Expected Output 2:__ | -1 |
+| __Code 3:__            | beepWriter("abc"); |
+| __Expected Output 3:__ | -1 |
+|                        ||
+|                        ||
+|                        ||
 
 ---
 ### Failing

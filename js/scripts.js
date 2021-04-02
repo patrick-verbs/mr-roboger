@@ -15,5 +15,9 @@ function listCountToInput(number) {
 }
 
 function beepWriter(array) {
-  return array
+  if (Array.isArray(array) === false) {
+    return -1
+  } else {
+    return array
+  }
 }
