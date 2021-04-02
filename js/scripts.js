@@ -21,13 +21,13 @@ function beepWriter(array) {
     for (i = 0; i < array.length; i++) {
       let reducedNum = array[i]
       while (reducedNum > 0) {
-        const decimalShift = reducedNum / 10
-        const thisDigit = 10 * ( decimalShift - Math.floor(decimalShift) )
+        const oneTenthOfNum = (reducedNum / 10).toFixed(1)// toFixed() prevents floating point errors on decimals
+        const thisDigit = 10 * ( oneTenthOfNum - Math.floor(oneTenthOfNum) ).toFixed(1)
         if (thisDigit === 1) {
           array[i] = "Beep!"
-          break
+          break// No need to finish while-loop once a "1" is found
         }
-        reducedNum = Math.floor(decimalShift)
+        reducedNum = Math.floor(oneTenthOfNum)
       }
     }
     return array
