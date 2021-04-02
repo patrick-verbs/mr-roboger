@@ -135,13 +135,21 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 
-| _Describe:_            | _rewriteNumberWithDigit(array, digit)_ |
+| _Describe:_            | _rewriteNumberWithDigit(array, targetDigit)_ |
 |------------------------|--------------|
-| __Test:__              | It takes additional parameter "digit" and can target digits other than 1. |
+| __Test:__              | It takes an additional parameter so it can target digits other than 1. |
 | __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3); |
 | __Expected Output 1:__ | [0, 1, 2, "Beep!"] |
 | __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6); |
 | __Expected Output 2:__ | [1, 4, 9, "Beep!", 25, "Beep!", 49, "Beep!", 81, 100] |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It takes additional parameter "newValue" and can replace with other values than the string "Beep!". |
+| __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3, "Hello!"); |
+| __Expected Output 1:__ | [0, 1, 2, "Hello!"] |
+| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6, 1138); |
+| __Expected Output 2:__ | [1, 4, 9, 1138, 25, 1138, 49, 1138, 81, 100] |
 |                        ||
 |                        ||
 |                        ||
