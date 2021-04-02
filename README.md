@@ -97,32 +97,48 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
+| __Test:__              | It passes an array to _rewriteNumberWithDigit()_ and returns that function's result. |
+| __Code 1:__            | listCountToInput(11); |
+| __Expected Output 1:__ | [0, "Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] |
+|                        ||
+|                        ||
+|                        ||
 
-| _Describe:_            | _beepWriter(array)_ |
+| _Describe:_            | _rewriteNumberWithDigit(array)_ |
 |------------------------|--------------|
 | __Test:__              | It returns an input array. |
-| __Code 1:__            | beepWriter([1, 2, 3]); |
+| __Code 1:__            | rewriteNumberWithDigit([1, 2, 3]); |
 | __Expected Output 1:__ | [1, 2, 3] |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It returns -1 if passed no argument, or an argument that is not an array. |
-| __Code 1:__            | beepWriter(); |
+| __Code 1:__            | rewriteNumberWithDigit(); |
 | __Expected Output 1:__ | -1 |
-| __Code 2:__            | beepWriter(10); |
+| __Code 2:__            | rewriteNumberWithDigit(10); |
 | __Expected Output 2:__ | -1 |
-| __Code 3:__            | beepWriter("abc"); |
+| __Code 3:__            | rewriteNumberWithDigit("abc"); |
 | __Expected Output 3:__ | -1 |
+|                        ||
+|                        ||
+|                        ||
+| _Describe:_            | _rewriteNumberWithDigit(array)_ |
+|------------------------|--------------|
+| __Test:__              | It changes all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
+| __Code 1:__            | rewriteNumberWithDigit([98, 99, 100, 101]); |
+| __Expected Output 1:__ | [98, 99, "Beep!", "Beep!"] |
+| __Code 2:__            | rewriteNumberWithDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
+| __Expected Output 2:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
 
 ---
 ### Failing
-| _Describe:_            | _beepWriter(array)_ |
+| _Describe:_            | _rewriteNumberWithDigit(array)_ |
 |------------------------|--------------|
 | __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!".<br>__Digit detection fails due to [binary handling of floating point numbers](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript).__ |
-| __Code 1:__            | beepWriter([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
+| __Code 1:__            | rewriteNumberWithDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
 | __Expected Output 1:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___"Beep!"___, "Beep!"] |
 | __Actual Output 1:__   | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___81___, "Beep!"]
 | __Code 2:__            | 8.1 - Math.floor(8.1); |
@@ -134,16 +150,6 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 | __Fixed using toFixed()__ | See [this question](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript). Leaving this here for posterity. |
 
-| _Describe:_            | _beepWriter(array)_ |
-|------------------------|--------------|
-| __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
-| __Code 1:__            | beepWriter([98, 99, 100, 101]); |
-| __Expected Output 1:__ | [98, 99, "Beep!", "Beep!"] |
-| __Code 2:__            | beepWriter([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
-| __Expected Output 2:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", 100] |
-|                        ||
-|                        ||
-|                        ||
 
 ---
 ### Template
