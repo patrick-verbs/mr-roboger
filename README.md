@@ -121,9 +121,9 @@ This project's repository and contained source is available under the MIT Licens
 ### Failing
 | _Describe:_            | _beepWriter(array)_ |
 |------------------------|--------------|
-| __Test:__              | __Fails due to [binary handling of floating point numbers](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript).__ It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
+| __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!".<br>__Digit detection fails due to [binary handling of floating point numbers](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript).__ |
 | __Code 1:__            | beepWriter([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
-| __Expected Output 1:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", "Beep!"] |
+| __Expected Output 1:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___"Beep!"___, "Beep!"] |
 | __Actual Output 1:__   | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___81___, "Beep!"]
 | __Code 2:__            | 8.1 - Math.floor(8.1); |
 | __Expected Output 2:__ | 0.1 |
@@ -131,8 +131,10 @@ This project's repository and contained source is available under the MIT Licens
 | __Code 3:__            | 8.1 - 8; |
 | __Expected Output 3:__ | 0.1 |
 | __Actual Output 3:__   | 0.09999999999999964 |
+|                        ||
+| __Fixed using toFixed()__ | See [this question](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript). Leaving this here for posterity. |
 
-| _Describe:_            | _beepWriter(array)_ |( decimalShift - Math.floor(decimalShift)
+| _Describe:_            | _beepWriter(array)_ |
 |------------------------|--------------|
 | __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
 | __Code 1:__            | beepWriter([98, 99, 100, 101]); |
