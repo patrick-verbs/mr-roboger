@@ -11,7 +11,8 @@ function listCountToInput(number) {
     }
     listedCount.push(integer)
   }
-  listedCount = rewriteNumberWithDigit(listedCount, 2, "Boop")
+  listedCount = rewriteNumberWithDigit(listedCount, 3, "Won't you be my neighbor?")
+  listedCount = rewriteNumberWithDigit(listedCount, 2, "Boop!")
   listedCount = rewriteNumberWithDigit(listedCount, 1, "Beep!")
   return listedCount
 }

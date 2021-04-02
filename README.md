@@ -159,9 +159,15 @@ This project's repository and contained source is available under the MIT Licens
 
 | _Describe:_            | _listCountToInput(number)_ |
 |------------------------|--------------|
-| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 2 with "Boop", _then_ calls it again to replace remaining numbers containing a 1 with "Beep!". |
+| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 2 with "Boop!", _then_ calls it again to replace remaining numbers containing a 1 with "Beep!". |
 | __Code 1:__            | listCountToInput(15); |
-| __Expected Output 1:__ | [0, "Beep!", "Boop", 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop", "Beep!", "Beep!", "Beep!"] |
+| __Expected Output 1:__ | [0, "Beep!", "Boop!", 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Beep!", "Beep!", "Beep!"] |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 3 with "Won't you be my neighbor?", then those with a 2 with "Boop!", then those containing a 1 with "Beep!". |
+| __Code 1:__            | listCountToInput(15); |
+| __Expected Output 1:__ | [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
