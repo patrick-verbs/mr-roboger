@@ -51,22 +51,34 @@ This project's repository and contained source is available under the MIT Licens
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Specs_
 ### Passing
 
-| _Describe:_          | _listCountToInput(number)_ |
-|----------------------|--------------|
-| __Test:__            | It should return -1 if a number less than 0 is entered. |
-| __Code:__            | listCountToInput(-0.5);<br>listCountToInput(-1);<br>listCountToInput(-100); |
-| __Expected Output:__ | -1;<br>-1;<br>-1; |
-|                      |     |
-|                      |     |
-|                      |     |
+| _Describe:_            | _listCountToInput(number)_ |
+|------------------------|--------------|
+| __Test:__              | It returns -1 if a number less than 0 is entered. |
+| __Code 1:__            | listCountToInput(-0.5); |
+| __Expected Output 1:__ | -1 |
+| __Code 2:__            | listCountToInput(-1); |
+| __Expected Output 2:__ | -1 |
+| __Code 3:__            | listCountToInput(-100); |
+| __Expected Output 3:__ | -1 |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It returns an array holding the input number. |
+| __Code 1:__            | listCountToInput(0); |
+| __Expected Output 1:__ | [0] |
+| __Code 2:__            | listCountToInput(100); |
+| __Expected Output 2:__ | [100] |
+|                        ||
+|                        ||
+|                        ||
 
 ---
 ### Failing
 | _Describe:_          | _listCountToInput(number)_ |
 |----------------------|--------------|
-| __Test:__            | It should return an array holding the input number as a string. |
+| __Test:__            | It should return an array holding a sequential count to the input number. |
 | __Code:__            | listCountToInput(0);<br>listCountToInput(100); |
-| __Expected Output:__ | ["0"];<br>["100"]; |
+| __Expected Output:__ | [0];<br>[100]; |
 |                      |     |
 |                      |     |
 |                      |     |
