@@ -19,8 +19,15 @@ function beepWriter(array) {
     return -1
   } else {
     for (i = 0; i < array.length; i++) {
-      if (array[i] === 1) {
+      decimalShift = 1
+      thisDigit = Math.floor(array[i] / decimalShift)
+      while (thisDigit > 0) {
+        if (thisDigit != 1) {
+          Math.floor(array[i] / 10)
+        } else {
         array[i] = "Beep!"
+        break
+        }
       }
     }
     return array
