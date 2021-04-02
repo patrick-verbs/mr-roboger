@@ -53,17 +53,37 @@ This project's repository and contained source is available under the MIT Licens
 
 none yet...
 
-
+---
 ### Failing
+| _Describe:_          | _listCountToInput(number)_ |
+|----------------------|--------------|
+| __Test:__            | It should return -1 if a number less than 0 is entered. |
+| __Code:__            | listCountToInput(-0.5);<br>listCountToInput(-1);<br>listCountToInput(-100); |
+| __Expected Output:__ | -1;<br>-1;<br>-1; |
+|                      |     |
+|                      |     |
+|                      |     |
+| __Test:__            | It should return an array holding the input number as a string. |
+| __Code:__            | listCountToInput(0);<br>listCountToInput(100); |
+| __Expected Output:__ | ["0"];<br>["100"]; |
+|                      |     |
+|                      |     |
+|                      |     |
+| __Test:__            | It should ignore decimals, returning values based on the integer preceding any entered decimals (i.e., round down). |
+| __Code:__            | listCountToInput(0.5);<br>listCountToInput(3.1415); |
+| __Expected Output:__ | 0;<br>3; |
+
+---
+### Template
 | _Describe:_          | _testTemplate()_ |
 |----------------------|--------------|
-| __Test:__            | "It should do the thing!" |
+| __Test:__            | It should do the thing! |
 | __Code:__            | testTemplate("Do the thing!") |
 | __Expected Output:__ | "So here's the thing..." |
 |                      |     |
 |                      |     |
 |                      |     |
-| __Test:__            | "It should also do this other thing..." |
+| __Test:__            | It should also do this other thing... |
 | __Code:__            | testTemplate("Another!") |
 | __Expected Output:__ | "And another thing!" |
 
