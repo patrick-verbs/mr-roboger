@@ -81,20 +81,31 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
-| __Test:__              | It should ignore decimals, returning values based on the integer preceding any entered decimals (i.e., round down). |
+| __Test:__              | It ignores decimals, rounding values down to the integer preceding any entered decimal. |
 | __Code 1:__            | listCountToInput(0.5); |
 | __Expected Output 1:__ | 0 |
 | __Code 2:__            | listCountToInput(3.1415); |
 | __Expected Output 2:__ | 3 |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It returns an array holding a sequential count to the input number. |
+| __Code 1:__            | listCountToInput(0); |
+| __Expected Output 1:__ | [0] |
+| __Code 2:__            | listCountToInput(10); |
+| __Expected Output 2:__ | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |
+|                        ||
+|                        ||
+|                        ||
 
 
 ---
 ### Failing
-| _Describe:_            | _listCountToInput(number)_ |
+| _Describe:_            | _beep(array)_ |
 |------------------------|--------------|
-| __Test:__              | It should return an array holding a sequential count to the input number. |
-| __Code:__              | listCountToInput(0);<br>listCountToInput(100); |
-| __Expected Output:__   | [0];<br>[100]; |
+| __Test:__              | It should return an input array. |
+| __Code 1:__            | beep([1, 2, 3]); |
+| __Expected Output 1:__ | [1, 2, 3] |
 |                        ||
 |                        ||
 |                        ||
