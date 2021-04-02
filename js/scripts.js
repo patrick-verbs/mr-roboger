@@ -18,6 +18,11 @@ function beepWriter(array) {
   if (Array.isArray(array) === false) {
     return -1
   } else {
+    for (i = 0; i < array.length; i++) {
+      if (array[i] === 1) {
+        array[i] = "Beep!"
+      }
+    }
     return array
   }
 }

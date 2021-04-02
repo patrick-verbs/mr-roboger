@@ -121,9 +121,9 @@ This project's repository and contained source is available under the MIT Licens
 ### Failing
 | _Describe:_            | _beepWriter(array)_ |
 |------------------------|--------------|
-| __Test:__              | It should return an input array. |
-| __Code 1:__            | beepWriter([1, 2, 3]); |
-| __Expected Output 1:__ | [1, 2, 3] |
+| __Test:__              | It should change all occurences of the value 1 to the string "Beep!". |
+| __Code 1:__            | beepWriter([1, 2, 3, 2, 1]); |
+| __Expected Output 1:__ | ["Beep!", 2, 3, 2, "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
