@@ -121,9 +121,11 @@ This project's repository and contained source is available under the MIT Licens
 ### Failing
 | _Describe:_            | _beepWriter(array)_ |
 |------------------------|--------------|
-| __Test:__              | It should change all occurences of the value 1 to the string "Beep!". |
-| __Code 1:__            | beepWriter([1, 2, 3, 2, 1]); |
-| __Expected Output 1:__ | ["Beep!", 2, 3, 2, "Beep!"] |
+| __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
+| __Code 1:__            | beepWriter([98, 99, 100, 101]); |
+| __Expected Output 1:__ | [98, 99, "Beep!", "Beep!"] |
+| __Code 2:__            | beepWriter([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
+| __Expected Output 2:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", 100] |
 |                        ||
 |                        ||
 |                        ||

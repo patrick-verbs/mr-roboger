@@ -19,15 +19,15 @@ function beepWriter(array) {
     return -1
   } else {
     for (i = 0; i < array.length; i++) {
-      decimalShift = 1
-      thisDigit = Math.floor(array[i] / decimalShift)
-      while (thisDigit > 0) {
-        if (thisDigit != 1) {
-          Math.floor(array[i] / 10)
-        } else {
-        array[i] = "Beep!"
-        break
+      let reducedNum = array[i]
+      while (reducedNum > 0) {
+        const decimalShift = reducedNum / 10
+        const thisDigit = 10 * ( decimalShift - Math.floor(decimalShift) )
+        if (thisDigit === 1) {
+          array[i] = "Beep!"
+          break
         }
+        reducedNum = Math.floor(decimalShift)
       }
     }
     return array
