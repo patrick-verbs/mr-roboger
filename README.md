@@ -51,10 +51,6 @@ This project's repository and contained source is available under the MIT Licens
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Specs_
 ### Passing
 
-none yet...
-
----
-### Failing
 | _Describe:_          | _listCountToInput(number)_ |
 |----------------------|--------------|
 | __Test:__            | It should return -1 if a number less than 0 is entered. |
@@ -63,6 +59,11 @@ none yet...
 |                      |     |
 |                      |     |
 |                      |     |
+
+---
+### Failing
+| _Describe:_          | _listCountToInput(number)_ |
+|----------------------|--------------|
 | __Test:__            | It should return an array holding the input number as a string. |
 | __Code:__            | listCountToInput(0);<br>listCountToInput(100); |
 | __Expected Output:__ | ["0"];<br>["100"]; |
