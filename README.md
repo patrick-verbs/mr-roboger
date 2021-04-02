@@ -1,7 +1,7 @@
 # <a name="MrRoboger"></a>"Mr. Roboger's Neighborhood"
 #### Patrick Lee | _[See this project on GitHub Pages](https://patrick-verbs.github.io/mr-roboger)_ _(...when it's live)_
 
-## __If you're an Epicodus student__ (or anyone else!) you're free to use this README as a template for your own work!!! :)
+## __If you're an Epicodus student__ (or anyone else!) you're free to use this README as a template for your own work :)
 <details><summary><strong>Contents</strong></summary>
 <ul>
   <li><a href="#About">About</a></li>
@@ -23,13 +23,20 @@
 
 ## <a name="Description"></a>Description
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Description_
-This project was initially created as an assignment. The goal was to demonstrate proficiency Test-Driven Development and the use of arrays and loops in JavaScript.
+This project was initially created as an assignment. The goal was to demonstrate proficiency in Test-Driven Development and the use of arrays and loops in JavaScript.
 
 ## <a name="Install"></a>Installation & Setup
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Installation & Setup_
-This project's repository and contained source is available under the MIT License. If you want to have a look under the hood or use any and all components, have at it!
+The goal of this project is to demonstrate Test-Driven Development. To see this in action:
+- Navigate to this project's [GitHub Pages site](https://github.com/patrick-verbs/mr-roboger) or open _index.html_ in your own cloned or forked repository
+- Open your browser's JavaScript console on the page
+- In a separate browser tab/window, head to the [Test Specs](#Specs) section below
+- Find a table (headed with the word "__Describe__" followed by a function name)
+- Read about what the function _should_ do on the "__Test__" row
+- Input the code from the "__Code__" row into your open JavaScript console
+- Compare your returned result to that which is described on the "__Expected Output__" row
 
-If you have a GitHub account, you can Clone or Fork this repository.
+This project's repository and contained source is available under the MIT License. If you want to have a look under the hood or use any and all components, have at it! If you have a GitHub account, you can Clone or Fork this repository.
 
 ## <a name="Technologies"></a>Technologies Used
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Technologies Used_
@@ -43,11 +50,9 @@ If you have a GitHub account, you can Clone or Fork this repository.
 ## <a name="Specs"></a>Test Specs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Specs_
 ### Passing
-<span>
 
 none yet...
 
-</span>
 
 ### Failing
 | _Describe:_          | _testTemplate()_ |
@@ -55,6 +60,7 @@ none yet...
 | __Test:__            | "It should do the thing!" |
 | __Code:__            | testTemplate("Do the thing!") |
 | __Expected Output:__ | "So here's the thing..." |
+|                      |     |
 |                      |     |
 |                      |     |
 | __Test:__            | "It should also do this other thing..." |
