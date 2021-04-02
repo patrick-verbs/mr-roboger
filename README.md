@@ -81,34 +81,37 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
+| __Test:__              | It should ignore decimals, returning values based on the integer preceding any entered decimals (i.e., round down). |
+| __Code 1:__            | listCountToInput(0.5); |
+| __Expected Output 1:__ | 0 |
+| __Code 2:__            | listCountToInput(3.1415); |
+| __Expected Output 2:__ | 3 |
+
 
 ---
 ### Failing
-| _Describe:_          | _listCountToInput(number)_ |
-|----------------------|--------------|
-| __Test:__            | It should return an array holding a sequential count to the input number. |
-| __Code:__            | listCountToInput(0);<br>listCountToInput(100); |
-| __Expected Output:__ | [0];<br>[100]; |
-|                      |     |
-|                      |     |
-|                      |     |
-| __Test:__            | It should ignore decimals, returning values based on the integer preceding any entered decimals (i.e., round down). |
-| __Code:__            | listCountToInput(0.5);<br>listCountToInput(3.1415); |
-| __Expected Output:__ | 0;<br>3; |
+| _Describe:_            | _listCountToInput(number)_ |
+|------------------------|--------------|
+| __Test:__              | It should return an array holding a sequential count to the input number. |
+| __Code:__              | listCountToInput(0);<br>listCountToInput(100); |
+| __Expected Output:__   | [0];<br>[100]; |
+|                        ||
+|                        ||
+|                        ||
 
 ---
 ### Template
-| _Describe:_          | _testTemplate()_ |
-|----------------------|--------------|
-| __Test:__            | It should do the thing! |
-| __Code:__            | testTemplate("Do the thing!") |
-| __Expected Output:__ | "So here's the thing..." |
-|                      |     |
-|                      |     |
-|                      |     |
-| __Test:__            | It should also do this other thing... |
-| __Code:__            | testTemplate("Another!") |
-| __Expected Output:__ | "And another thing!" |
+| _Describe:_            | _testTemplate()_ |
+|------------------------|--------------|
+| __Test:__              | It should do the thing! |
+| __Code:__              | testTemplate("Do the thing!"); |
+| __Expected Output:__   | "So here's the thing..." |
+|                        ||
+|                        ||
+|                        ||
+| __Test:__              | It should also do this other thing... |
+| __Code:__              | testTemplate("Another!"); |
+| __Expected Output:__   | "And another thing!" |
 
 # <a name="License"></a>License
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > License_
