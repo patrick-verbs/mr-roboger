@@ -63,6 +63,16 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
+| __Test:__              | It returns -1 if a non-number value (including a numeric string, e.g. "7") is entered. |
+| __Code 1:__            | listCountToInput("hello"); |
+| __Expected Output 1:__ | -1 |
+| __Code 2:__            | listCountToInput("123abc"); |
+| __Expected Output 2:__ | -1 |
+| __Code 3:__            | listCountToInput("1"); |
+| __Expected Output 3:__ | -1 |
+|                        ||
+|                        ||
+|                        ||
 | __Test:__              | It returns an array holding the input number. |
 | __Code 1:__            | listCountToInput(0); |
 | __Expected Output 1:__ | [0] |
