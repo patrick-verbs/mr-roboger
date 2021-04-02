@@ -101,10 +101,10 @@ This project's repository and contained source is available under the MIT Licens
 
 ---
 ### Failing
-| _Describe:_            | _beep(array)_ |
+| _Describe:_            | _beepWriter(array)_ |
 |------------------------|--------------|
 | __Test:__              | It should return an input array. |
-| __Code 1:__            | beep([1, 2, 3]); |
+| __Code 1:__            | beepWriter([1, 2, 3]); |
 | __Expected Output 1:__ | [1, 2, 3] |
 |                        ||
 |                        ||

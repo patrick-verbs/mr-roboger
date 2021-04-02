@@ -13,3 +13,7 @@ function listCountToInput(number) {
     return listedCount
   }
 }
+
+function beepWriter(array) {
+  return array
+}
