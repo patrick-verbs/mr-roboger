@@ -145,11 +145,23 @@ This project's repository and contained source is available under the MIT Licens
 |                        ||
 |                        ||
 |                        ||
-| __Test:__              | It takes additional parameter "newValue" and can replace with other values than the string "Beep!". |
+
+| _Describe:_            | _rewriteNumberWithDigit(array, targetDigit, newValue)_ |
+|------------------------|--------------|
+| __Test:__              | It takes additional parameter "newValue" and can rewrite with values other than the string "Beep!". |
 | __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3, "Hello!"); |
 | __Expected Output 1:__ | [0, 1, 2, "Hello!"] |
 | __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6, 1138); |
 | __Expected Output 2:__ | [1, 4, 9, 1138, 25, 1138, 49, 1138, 81, 100] |
+|                        ||
+|                        ||
+|                        ||
+
+| _Describe:_            | _listCountToInput(number)_ |
+|------------------------|--------------|
+| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 2 with "Boop", _then_ calls it again to replace remaining numbers containing a 1 with "Beep!". |
+| __Code 1:__            | listCountToInput(15); |
+| __Expected Output 1:__ | [0, "Beep!", "Boop", 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop", "Beep!", "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||

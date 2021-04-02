@@ -11,6 +11,7 @@ function listCountToInput(number) {
     }
     listedCount.push(integer)
   }
+  listedCount = rewriteNumberWithDigit(listedCount, 2, "Boop")
   listedCount = rewriteNumberWithDigit(listedCount, 1, "Beep!")
   return listedCount
 }
@@ -26,7 +27,7 @@ function rewriteNumberWithDigit(array, targetDigit, newValue) {
         const thisDigit = 10 * ( oneTenthOfNum - Math.floor(oneTenthOfNum) ).toFixed(1)
         if (thisDigit === targetDigit) {
           array[i] = newValue
-          break// No need to finish while-loop once a "1" is found
+          break// No need to finish the while-loop once a target digit is found
         }
         reducedNum = Math.floor(oneTenthOfNum)
       }
