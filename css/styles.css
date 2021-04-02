@@ -1,0 +1,18 @@
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+button {
+  width: 200px;
+  height: 80px;
+  background-color: #0080ff50;
+  border: 2px solid #0080ff;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+input.valueInput {
+  width: 320px;
+}
