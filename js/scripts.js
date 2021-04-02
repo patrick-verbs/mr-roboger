@@ -10,11 +10,12 @@ function listCountToInput(number) {
       counter ++
     }
     listedCount.push(integer)
-    return listedCount
   }
+  listedCount = rewriteNumberWithDigit(listedCount)
+  return listedCount
 }
 
-function beepWriter(array) {
+function rewriteNumberWithDigit(array) {
   if (Array.isArray(array) === false) {
     return -1
   } else {
