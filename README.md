@@ -46,127 +46,127 @@ This project's repository and contained source is available under the MIT Licens
 
 ## <a name="Bugs"></a>Known Bugs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Known Bugs_
-- _rewriteNumberWithDigit(array, targetDigit, newValue)_ will successfully locate digits 1-9 in a number but it will not find 0 if that is passed (numbers have infinite zeroes and I haven't written special casing)
+- _replaceNumbersIfDigit(array, targetDigit, newValue)_ will successfully locate digits 1-9 in a number but it will not find 0 if that is passed (numbers have infinite zeroes and I haven't written special casing)
 
 ## <a name="Specs"></a>Test Specs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Specs_
 ### Passing
 
-| _Describe:_            | _listCountToInput(number)_ |
+| _Describe:_            | _countToThis(number)_ |
 |------------------------|--------------|
 | __Test:__              | It returns -1 if a number less than 0 is entered. |
-| __Code 1:__            | listCountToInput(-0.5); |
+| __Code 1:__            | countToThis(-0.5); |
 | __Expected Output 1:__ | -1 |
-| __Code 2:__            | listCountToInput(-1); |
+| __Code 2:__            | countToThis(-1); |
 | __Expected Output 2:__ | -1 |
-| __Code 3:__            | listCountToInput(-100); |
+| __Code 3:__            | countToThis(-100); |
 | __Expected Output 3:__ | -1 |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It returns -1 if a non-number value (including a numeric string, e.g. "7") is entered. |
-| __Code 1:__            | listCountToInput("hello"); |
+| __Code 1:__            | countToThis("hello"); |
 | __Expected Output 1:__ | -1 |
-| __Code 2:__            | listCountToInput("123abc"); |
+| __Code 2:__            | countToThis("123abc"); |
 | __Expected Output 2:__ | -1 |
-| __Code 3:__            | listCountToInput("1"); |
+| __Code 3:__            | countToThis("1"); |
 | __Expected Output 3:__ | -1 |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It returns an array holding the input number. |
-| __Code 1:__            | listCountToInput(0); |
+| __Code 1:__            | countToThis(0); |
 | __Expected Output 1:__ | [0] |
-| __Code 2:__            | listCountToInput(100); |
+| __Code 2:__            | countToThis(100); |
 | __Expected Output 2:__ | [100] |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It ignores decimals, rounding values down to the integer preceding any entered decimal. |
-| __Code 1:__            | listCountToInput(0.5); |
+| __Code 1:__            | countToThis(0.5); |
 | __Expected Output 1:__ | 0 |
-| __Code 2:__            | listCountToInput(3.1415); |
+| __Code 2:__            | countToThis(3.1415); |
 | __Expected Output 2:__ | 3 |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It returns an array holding a sequential count to the input number. |
-| __Code 1:__            | listCountToInput(0); |
+| __Code 1:__            | countToThis(0); |
 | __Expected Output 1:__ | [0] |
-| __Code 2:__            | listCountToInput(10); |
+| __Code 2:__            | countToThis(10); |
 | __Expected Output 2:__ | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |
 |                        ||
 |                        ||
 |                        ||
 
-| _Describe:_            | _rewriteNumberWithDigit(array)_ |
+| _Describe:_            | _replaceNumbersIfDigit(array)_ |
 |------------------------|--------------|
 | __Test:__              | It returns an input array. |
-| __Code 1:__            | rewriteNumberWithDigit([1, 2, 3]); |
+| __Code 1:__            | replaceNumbersIfDigit([1, 2, 3]); |
 | __Expected Output 1:__ | [1, 2, 3] |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It returns -1 if passed no argument, or an argument that is not an array. |
-| __Code 1:__            | rewriteNumberWithDigit(); |
+| __Code 1:__            | replaceNumbersIfDigit(); |
 | __Expected Output 1:__ | -1 |
-| __Code 2:__            | rewriteNumberWithDigit(10); |
+| __Code 2:__            | replaceNumbersIfDigit(10); |
 | __Expected Output 2:__ | -1 |
-| __Code 3:__            | rewriteNumberWithDigit("abc"); |
+| __Code 3:__            | replaceNumbersIfDigit("abc"); |
 | __Expected Output 3:__ | -1 |
 |                        ||
 |                        ||
 |                        ||
 | __Test:__              | It changes all occurences of numbers containing the _digit_ 1 to the string "Beep!". |
-| __Code 1:__            | rewriteNumberWithDigit([98, 99, 100, 101]); |
+| __Code 1:__            | replaceNumbersIfDigit([98, 99, 100, 101]); |
 | __Expected Output 1:__ | [98, 99, "Beep!", "Beep!"] |
-| __Code 2:__            | rewriteNumberWithDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
+| __Code 2:__            | replaceNumbersIfDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
 | __Expected Output 2:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
 
-| _Describe:_            | _listCountToInput(number)_ |
+| _Describe:_            | _countToThis(number)_ |
 |------------------------|--------------|
-| __Test:__              | It passes an array to _rewriteNumberWithDigit()_ and returns that function's result. |
-| __Code 1:__            | listCountToInput(11); |
+| __Test:__              | It passes an array to _replaceNumbersIfDigit()_ and returns that function's result. |
+| __Code 1:__            | countToThis(11); |
 | __Expected Output 1:__ | [0, "Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
 
-| _Describe:_            | _rewriteNumberWithDigit(array, targetDigit)_ |
+| _Describe:_            | _replaceNumbersIfDigit(array, targetDigit)_ |
 |------------------------|--------------|
 | __Test:__              | It takes an additional parameter so it can target digits other than 1. |
-| __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3); |
+| __Code 1:__            | replaceNumbersIfDigit([0, 1, 2, 3], 3); |
 | __Expected Output 1:__ | [0, 1, 2, "Beep!"] |
-| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6); |
+| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>replaceNumbersIfDigit(squaresArray, 6); |
 | __Expected Output 2:__ | [1, 4, 9, "Beep!", 25, "Beep!", 49, "Beep!", 81, 100] |
 |                        ||
 |                        ||
 |                        ||
 
-| _Describe:_            | _rewriteNumberWithDigit(array, targetDigit, newValue)_ |
+| _Describe:_            | _replaceNumbersIfDigit(array, targetDigit, newValue)_ |
 |------------------------|--------------|
 | __Test:__              | It takes additional parameter "newValue" and can rewrite with values other than the string "Beep!". |
-| __Code 1:__            | rewriteNumberWithDigit([0, 1, 2, 3], 3, "Hello!"); |
+| __Code 1:__            | replaceNumbersIfDigit([0, 1, 2, 3], 3, "Hello!"); |
 | __Expected Output 1:__ | [0, 1, 2, "Hello!"] |
-| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>rewriteNumberWithDigit(squaresArray, 6, 1138); |
+| __Code 2:__            | squaresArray = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];<br>replaceNumbersIfDigit(squaresArray, 6, 1138); |
 | __Expected Output 2:__ | [1, 4, 9, 1138, 25, 1138, 49, 1138, 81, 100] |
 |                        ||
 |                        ||
 |                        ||
 
-| _Describe:_            | _listCountToInput(number)_ |
+| _Describe:_            | _countToThis(number)_ |
 |------------------------|--------------|
-| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 2 with "Boop!", _then_ calls it again to replace remaining numbers containing a 1 with "Beep!". |
-| __Code 1:__            | listCountToInput(15); |
+| __Test:__              | It first calls  _replaceNumbersIfDigit()_ to replace numbers containing a 2 with "Boop!", _then_ calls it again to replace remaining numbers containing a 1 with "Beep!". |
+| __Code 1:__            | countToThis(15); |
 | __Expected Output 1:__ | [0, "Beep!", "Boop!", 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Beep!", "Beep!", "Beep!"] |
 |                        ||
 |                        ||
 |                        ||
-| __Test:__              | It first calls  _rewriteNumberWithDigit()_ to replace numbers containing a 3 with "Won't you be my neighbor?", then those with a 2 with "Boop!", then those containing a 1 with "Beep!". |
-| __Code 1:__            | listCountToInput(15); |
+| __Test:__              | It first calls  _replaceNumbersIfDigit()_ to replace numbers containing a 3 with "Won't you be my neighbor?", then those with a 2 with "Boop!", then those containing a 1 with "Beep!". |
+| __Code 1:__            | countToThis(15); |
 | __Expected Output 1:__ | [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?", "Beep!", "Beep!"] |
 |                        ||
 |                        ||
@@ -174,10 +174,10 @@ This project's repository and contained source is available under the MIT Licens
 
 ---
 ### Failing
-| _Describe:_            | _rewriteNumberWithDigit(array)_ |
+| _Describe:_            | _replaceNumbersIfDigit(array)_ |
 |------------------------|--------------|
 | __Test:__              | It should change all occurences of numbers containing the _digit_ 1 to the string "Beep!".<br>__Digit detection fails due to [binary handling of floating point numbers](https://stackoverflow.com/questions/5153061/simple-subtraction-bug-in-javascript).__ |
-| __Code 1:__            | rewriteNumberWithDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
+| __Code 1:__            | replaceNumbersIfDigit([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]); |
 | __Expected Output 1:__ | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___"Beep!"___, "Beep!"] |
 | __Actual Output 1:__   | ["Beep!", 4, 9, "Beep!", 25, 36, 49, 64, ___81___, "Beep!"]
 | __Code 2:__            | 8.1 - Math.floor(8.1); |
