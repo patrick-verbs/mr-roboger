@@ -199,7 +199,16 @@
       });
   };
 
-  var methods = {
+  var loop = function (val) {
+    return this.each(function () {
+        var $this = $(this),
+            data  = $this.data('animateSprite');
+        // data.loop
+        data.settings.loop = val;
+    });
+};
+
+var methods = {
       init: init,
       frame: frame,
       stop: stop,
@@ -209,7 +218,8 @@
       stopAnimation: stop,
       resumeAnimation: resume,
       restartAnimation: restart,
-      fps: fps
+      fps: fps,
+      loop: loop
   };
 
   $.fn.animateSprite = function (method) {
