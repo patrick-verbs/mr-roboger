@@ -13,24 +13,21 @@ function countToThis(number) {
     }
     listedCount.push(integer)
   }
-  listedCount = replaceNumbersIfDigit(listedCount, 3, "Won't you be my neighbor?")
-  listedCount = replaceNumbersIfDigit(listedCount, 2, "Boop!")
-  listedCount = replaceNumbersIfDigit(listedCount, 1, "Beep!")
   return listedCount
 }
 
 function replaceNumbersIfDigit(numberArray, targetDigit, newValue) {
-  alert(targetDigit)
   if (Array.isArray(numberArray) === false) {
     return -1
   } else {
-    for (i = 0; i < numberArray.length; i++) {
+    let revisedArray = numberArray
+    for (let i = 0; i < numberArray.length; i++) {
       let reducedNum = numberArray[i]
       while (reducedNum > 0) {
         const oneTenthOfNum = (reducedNum / 10).toFixed(1)// toFixed() prevents floating point errors on decimals
         const thisDigit = 10 * ( oneTenthOfNum - Math.floor(oneTenthOfNum) ).toFixed(1)
-        if (thisDigit === targetDigit) {
-          numberArray[i] = newValue
+        if (thisDigit === parseInt(targetDigit)) {
+          revisedArray[i] = newValue
           break// No need to finish the while-loop once a target digit is found
         }
         reducedNum = Math.floor(oneTenthOfNum)
@@ -50,14 +47,14 @@ $(document).ready(function() {
     event.preventDefault()
 
     let countTo
-    let surveyInputPairs = []
+    const surveyInputPairs = []
 
     // Set the number the user wants Mr. Roboger to count to
-    countTo = parseInt($(`input#count`).val())
+    countTo = parseInt($("input#count").val())
 
     // Scrape the DOM for the *single digits* the user wants to target
     $("input.digitInput").each(function(i) {
-      surveyInputPairs.push([$(this).val(), ""])
+      surveyInputPairs.push([$(this).val(), "test"])
     })
 
     // Scrape the DOM for the *new values* the user wants their targeted numbers to be replaced with
@@ -66,15 +63,23 @@ $(document).ready(function() {
     })
 
     // Pass form inputs (as an array) to a business-logic function:
-    alert("Mr. Roboger will count to " + countTo)
-    const surveyOutputs = countToThis(countTo)
+    const countingSequence = countToThis(countTo)
+    let revisedSequence = countingSequence
+
+    let targetDigit
+    let newValue
+
+    for (let i = 0; i < surveyInputPairs.length; i++) {
+      targetDigit = surveyInputPairs[i][0]
+      newValue = surveyInputPairs[i][1]
+      revisedSequence = replaceNumbersIfDigit(revisedSequence, targetDigit, newValue)
+    }
+  
 
 
     // Reveal the count
-    // $("section#survey-form").removeClass()
-    // $("section#survey-form").addClass("hide-me")
     $("#roboCounter").addClass("show-me")
     $("#roboCounter").removeClass("hide-me")
-    $("#roboCounter").append("<p>" + surveyOutputs + "</p>")
+    $("#roboCounter").append("<p>" + revisedSequence + "</p>")
   })
 })
