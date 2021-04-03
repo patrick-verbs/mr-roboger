@@ -41,6 +41,8 @@ function replaceNumbersIfDigit(numberArray, targetDigit, newValue) {
 ///////////////////////
 $(document).ready(function() {
 
+  // wakeUp: [19, 19, 19, 25, 25, 25, 19, 19, 18, 18, 19, 19, 18, 19, 6, 6, 7, 7, 8, 8, 14, 14, 14, 14, 15],
+
   $("form#formOne").submit(function(event) {
     // Prevent the form data from being pushed to a server,
     // since all data is being handled here in JS/CSS/HTML:
@@ -75,8 +77,6 @@ $(document).ready(function() {
       revisedSequence = replaceNumbersIfDigit(revisedSequence, targetDigit, newValue)
     }
   
-
-
     // Reveal the count
     $("#roboCounter").addClass("showMe")
     $("#roboCounter").removeClass("hideMe")
