@@ -1,41 +1,42 @@
 // Business logic
 /////////////////
-function listCountToInput(number) {
+function countToThis(number) {
   let listedCount = []
   if (number < 0 || typeof number != "number") {
     return -1
   } else {
-    counter = 0
-    integer = Math.floor(number)
+    let counter = 0
+    let integer = Math.floor(number)
     while (counter < integer) {
       listedCount.push(counter)
       counter ++
     }
     listedCount.push(integer)
   }
-  listedCount = rewriteNumberWithDigit(listedCount, 3, "Won't you be my neighbor?")
-  listedCount = rewriteNumberWithDigit(listedCount, 2, "Boop!")
-  listedCount = rewriteNumberWithDigit(listedCount, 1, "Beep!")
+  listedCount = replaceNumbersIfDigit(listedCount, 3, "Won't you be my neighbor?")
+  listedCount = replaceNumbersIfDigit(listedCount, 2, "Boop!")
+  listedCount = replaceNumbersIfDigit(listedCount, 1, "Beep!")
   return listedCount
 }
 
-function rewriteNumberWithDigit(array, targetDigit, newValue) {
-  if (Array.isArray(array) === false) {
+function replaceNumbersIfDigit(numberArray, targetDigit, newValue) {
+  alert(targetDigit)
+  if (Array.isArray(numberArray) === false) {
     return -1
   } else {
-    for (i = 0; i < array.length; i++) {
-      let reducedNum = array[i]
+    for (i = 0; i < numberArray.length; i++) {
+      let reducedNum = numberArray[i]
       while (reducedNum > 0) {
         const oneTenthOfNum = (reducedNum / 10).toFixed(1)// toFixed() prevents floating point errors on decimals
         const thisDigit = 10 * ( oneTenthOfNum - Math.floor(oneTenthOfNum) ).toFixed(1)
         if (thisDigit === targetDigit) {
-          array[i] = newValue
+          numberArray[i] = newValue
           break// No need to finish the while-loop once a target digit is found
         }
         reducedNum = Math.floor(oneTenthOfNum)
       }
     }
-    return array
+    return numberArray
   }
 }
 
@@ -52,8 +53,7 @@ $(document).ready(function() {
     let surveyInputPairs = []
 
     // Set the number the user wants Mr. Roboger to count to
-    countTo = $(`input#count`).val()
-    alert("Mr. Roboger will count to " + countTo)
+    countTo = parseInt($(`input#count`).val())
 
     // Scrape the DOM for the *single digits* the user wants to target
     $("input.digitInput").each(function(i) {
@@ -66,7 +66,8 @@ $(document).ready(function() {
     })
 
     // Pass form inputs (as an array) to a business-logic function:
-    const surveyOutputs = listCountToInput(countTo)
+    alert("Mr. Roboger will count to " + countTo)
+    const surveyOutputs = countToThis(countTo)
 
 
     // Reveal the count
@@ -74,6 +75,6 @@ $(document).ready(function() {
     // $("section#survey-form").addClass("hide-me")
     $("#roboCounter").addClass("show-me")
     $("#roboCounter").removeClass("hide-me")
-    // $("#roboCounter").append("<p>TEST</p>")
+    $("#roboCounter").append("<p>" + surveyOutputs + "</p>")
   })
 })
