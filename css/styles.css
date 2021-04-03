@@ -1,8 +1,8 @@
-.hide-me {
+.hideMe {
   display: none;
 }
 
-.show-me {
+.showMe {
   display: inline-block;
 }
 
@@ -24,3 +24,4 @@ button {
 input.valueInput {
   width: 320px;
 }
+

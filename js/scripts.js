@@ -78,8 +78,18 @@ $(document).ready(function() {
 
 
     // Reveal the count
-    $("#roboCounter").addClass("show-me")
-    $("#roboCounter").removeClass("hide-me")
-    $("#roboCounter").append("<p>" + revisedSequence + "</p>")
+    $("#roboCounter").addClass("showMe")
+    $("#roboCounter").removeClass("hideMe")
+    for (let i = 0; i < revisedSequence.length + 4; i++) {
+      const pCount = "#count" + i
+      $("#roboCounter").prepend("<p id=\"count" + i + "\"></p>")
+      if (i < revisedSequence.length) {
+        $(pCount).append(revisedSequence[i])
+      } else {
+        $(pCount).append("<br>")
+      }
+      $(pCount).hide().delay(750 * (i + 1)).fadeIn()
+      $(pCount).delay(3000).fadeOut()
+    }
   })
 })
