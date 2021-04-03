@@ -1,3 +1,5 @@
+// Business logic
+/////////////////
 function listCountToInput(number) {
   let listedCount = []
   if (number < 0 || typeof number != "number") {
@@ -36,3 +38,40 @@ function rewriteNumberWithDigit(array, targetDigit, newValue) {
     return array
   }
 }
+
+// User-interface logic
+///////////////////////
+$(document).ready(function() {
+  let countTo
+  let surveyInputPairs = []
+
+  $("#form1").submit(function(event) {
+    // Prevent the form data from being pushed to a server,
+    // since all data is being handled here in JS/CSS/HTML:
+    event.preventDefault()
+
+    // Set the number the user wants Mr. Roboger to count to
+    countTo = $(`input#count`).val()
+
+    // Scrape the DOM for the *single digits* the user wants to target
+    $(`input.digitInput`).each(function(index) {
+      surveyInputPairs[index][0] = [$(this).val]
+    })
+
+    // Scrape the DOM for the *new values* the user wants their targeted numbers to be replaced with
+    $(`input.valueInput`).each(function(index) {
+      surveyInputPairs[index][1] = [$(this).val]
+    })
+
+    // Pass form inputs (as an array) to a business-logic function:
+    const surveyOutputs = listCountToInput(countTo)
+
+
+    // Reveal the count
+    // $("section#survey-form").removeClass()
+    // $("section#survey-form").addClass("hide-me")
+    $("section#survey-results").addClass("show-me")
+    $("section#survey-results").removeClass("hide-me")
+    
+  })
+})

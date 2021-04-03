@@ -1,3 +1,11 @@
+.hide-me {
+  display: none;
+}
+
+.show-me {
+  display: inline-block;
+}
+
 h2 {
   font-size: 24px;
   font-weight: 800;
