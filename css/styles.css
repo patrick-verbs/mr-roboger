@@ -46,3 +46,19 @@ input.valueInput {
 #roboCounter {
   max-height: 200px;
 }
+
+.sprite-backdrop {
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background-color: lightgreen;
+}
+
+.robot {
+  height: 128px;
+  margin: 0;
+  padding: 0;
+  width: 128px;
+  background-image: url("../media/img/128px-Green_Robot_by_GrafxKid_(edited).png");
+}
