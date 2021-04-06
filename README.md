@@ -19,7 +19,7 @@
 
 # <a name="About"></a>About
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > About_
-?
+This project was initially created as an assignment. The goal was to demonstrate test-driven development practices with a themed integer counter that incorporates arrays and loop handling. Part of the theme was returning string responses for one "Mr. Roboger," so I wanted to push the theme a little further with a [pixel-art robot character](https://opengameart.org/content/green-robot) animated by Filidor Wiese's awesome [Spriteling](https://github.com/filidorwiese/spriteling) library.
 
 ## <a name="Description"></a>Description
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Description_
