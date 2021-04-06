@@ -35,8 +35,19 @@ main {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 800;
+  padding: 10px;
+}
+
+input {
+  background-color: #ff000000;
+  border: none;
+  margin: -32px 0 0 100px;
+  padding: 10px;
+  font-size: 48px;
+  line-height: 32px;
+  width: 200px;
 }
 
 div#settings {
