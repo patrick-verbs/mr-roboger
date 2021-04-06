@@ -41,12 +41,65 @@ function replaceNumbersIfDigit(numberArray, targetDigit, newValue) {
 ///////////////////////
 $(document).ready(function() {
 
-  // wakeUp: [19, 19, 19, 25, 25, 25, 19, 19, 18, 18, 19, 19, 18, 19, 6, 6, 7, 7, 8, 8, 14, 14, 14, 14, 15],
+  // Spriteling.js
+  let robot = new Spriteling({
+    url: 'img/128px-Green_Robot_by_GrafxKid.png',
+    bottom: 86,
+    left: 360,
+    cols: 7,
+    rows: 4
+  }, '#robot', true)
+
+  robot.addScript('sleep', [
+    {sprite: 20, delay: 1000}
+  ])
+
+  robot.addScript('wakeUp', [
+    {sprite: 20, delay: 1000},
+    {sprite: 26, delay: 600},
+    {sprite: 20, delay: 400},
+    {sprite: 19, delay: 400},
+    {sprite: 20, delay: 400},
+    {sprite: 19, delay: 200},
+    {sprite: 20, delay: 200},
+    {sprite: 7, delay: 400},
+    {sprite: 8, delay: 400},
+    {sprite: 9, delay: 400},
+    {sprite: 15, delay: 1600},
+    {sprite: 16, delay: 3000},
+    {sprite: 15, delay: 200},
+  ])
+
+  robot.addScript('idle', [
+    {sprite: 1, delay: 250},
+    {sprite: 2, delay: 500},
+    {sprite: 3, delay: 250}
+  ])
+
+  robot.play('sleep', {
+    run: -1,
+    delay: 100
+  })
 
   $("form#formOne").submit(function(event) {
     // Prevent the form data from being pushed to a server,
     // since all data is being handled here in JS/CSS/HTML:
     event.preventDefault()
+
+    robot.play('sleep', {
+      run: 1,
+      delay: 100,
+      onStop: function () {
+        robot.play('wakeUp', {
+          run: 1,
+          onStop: function () {
+            robot.play('idle', {
+              run: -1
+            })
+          }
+        })
+      }
+    })
 
     let countTo
     const surveyInputPairs = []
@@ -78,17 +131,21 @@ $(document).ready(function() {
     }
   
     // Reveal the count
-    $("#roboCounter").addClass("showMe")
-    $("#roboCounter").removeClass("hideMe")
-    for (let i = 0; i < revisedSequence.length + 4; i++) {
+    const roboCounter = $("#roboCounter")
+    roboCounter.addClass("showMe")
+    roboCounter.removeClass("hideMe")
+    let i = 0
+    while (i < revisedSequence.length + 4) {
       const pCount = "#count" + i
-      $("#roboCounter").prepend("<p id=\"count" + i + "\"></p>")
+      roboCounter.prepend("<p id=\"count" + i + "\"></p>")
       if (i < revisedSequence.length) {
         $(pCount).append(revisedSequence[i])
+        i++
       } else {
         $(pCount).append("<br>")
+        i++
       }
-      $(pCount).hide().delay(750 * (i + 1)).fadeIn()
+      $(pCount).hide().delay( 8000 + (750 * (i + 1)) ).fadeIn()
       $(pCount).delay(3000).fadeOut()
     }
   })
