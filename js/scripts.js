@@ -84,8 +84,18 @@ $(document).ready(function() {
   // Settings DIV toggle
   const settingsDiv = $("div#settings")
   const settingsButton = $("button#settings")
+  settingsButton.append("<span>" + $("#firstDigit").val() + "</span>")
+  settingsButton.hover(
+    function() {
+      $( this ).find( "span" ).last().remove();
+      $( this ).append( $( "<span>?</span>" ) );
+    }, function() {
+      $( this ).find( "span" ).last().remove();
+      settingsButton.append("<span>" + $("#firstDigit").val() + "</span>")
+    }
+  );
   settingsButton.click(function() {
-    settingsDiv.toggle()
+    settingsDiv.slideToggle("slow")
   })
 
   $("form#formOne").submit(function(event) {
