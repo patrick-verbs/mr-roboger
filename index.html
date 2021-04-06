@@ -8,37 +8,40 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <!-- jQuery 3.6 via CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <title></title>
+  <script type="text/javascript" src="js/spriteling.min.js"></script>
+  <script src="js/scripts.js" type="text/javascript"></script>
+  <title>Mr. Roboger's Neighborhood</title>
 </head>
 <body>
 
   <main>
     <div class="container">
-      <div class="card">
+      <div class="card" id="neighborhood">
         <form id="formOne">
           <h2>What number would you like Mr. Roboger to count to with you?</h2>
           <input id="count" value="15">
 
-          <label for="firstDigit"></label>
+          <div id="settings">
+            <label for="firstDigit"></label>
+            <br>
+            Replace numbers containing the digit <input id="firstDigit" class="digitInput" type="text" value="3"> with this text:
+            <input id="firstValue" class="valueInput" type="text" value="Won't you be my neighbor?">
+            <br>
+            <br>
+            <label for="secondDigit"></label>
+            <br>
+            Replace numbers containing the digit <input id="secondDigit" class="digitInput" type="text" value="2"> with this text:
+            <input id="secondValue" class="valueInput" type="text" value="Boop!">
+            <br>
+            <br>
+            <label for="thirdDigit"></label>
+            <br>
+            Replace numbers containing the digit <input id="secondDigit" class="digitInput" type="text" value="1"> with this text:
+            <input id="thirdValue" class="valueInput" type="text" value="Beep!">
+          </div>
           <br>
-          Replace numbers containing the digit <input id="firstDigit" class="digitInput" type="text" value="3"> with this text:
-          <input id="firstValue" class="valueInput" type="text" value="Won't you be my neighbor?">
           <br>
-          <br>
-          <label for="secondDigit"></label>
-          <br>
-          Replace entire numbers containing the digit <input id="secondDigit" class="digitInput" type="text" value="2"> with this text:
-          <input id="secondValue" class="valueInput" type="text" value="Boop!">
-          <br>
-          <br>
-          <label for="thirdDigit"></label>
-          <br>
-          Replace entire numbers containing the digit <input id="secondDigit" class="digitInput" type="text" value="1"> with this text:
-          <input id="thirdValue" class="valueInput" type="text" value="Beep!">
-          <br>
-          <br>
-          <button type="submit">Robo-count!</button>
+          <button id="robot" type="submit"></button>
         </form>
       </div>
       

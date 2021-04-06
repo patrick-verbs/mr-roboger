@@ -12,16 +12,21 @@ body {
 }
 
 main {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   margin: auto;
   padding: 1vw;
-  height: fit-content;
-  width: fit-content;
+  height: 640px;
+  width: 640px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
-.card {
-  width: 20vw;
-  min-width: 480px;
+.card#neighborhood {
+  /* width: 20vw; */
+  width: 640px;
+  height: 640px;
+  background-image: url("../img/Backdrop02.png");
 }
 
 h2 {
@@ -29,7 +34,7 @@ h2 {
   font-weight: 800;
 }
 
-button {
+/* button {
   width: 200px;
   height: 64px;
   background-color: #0080ff50;
@@ -37,6 +42,15 @@ button {
   font-size: 24px;
   font-weight: 800;
   text-transform: lowercase;
+} */
+
+div#settings {
+  display: none;
+}
+
+button {
+  background-color: #00000000;
+  border: none;
 }
 
 input.valueInput {
@@ -46,3 +60,19 @@ input.valueInput {
 #roboCounter {
   max-height: 200px;
 }
+
+.sprite-backdrop {
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background-color: lightgreen;
+}
+
+/* #sprite {
+  /* height: 128px;
+  margin: 0;
+  padding: 0;
+  width: 128px;
+  background-image: url("../img/128px-Green_Robot_by_GrafxKid_(edited).png");
+} */
