@@ -40,9 +40,12 @@ This project's repository and contained source is available under the MIT Licens
 
 ## <a name="Technologies"></a>Technologies Used
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Technologies Used_
+- 
 - __HTML5__
 - __JavaScript__ with __[jQuery v. 3.6.0](https://jquery.com/)__
+  - __[Spriteling](https://github.com/filidorwiese/spriteling)__ by Filidor Wiese
 - __CSS3__ with __[Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)__
+- __"[Green Robot](https://opengameart.org/content/green-robot)"__ and __"[City Mega Pack](https://opengameart.org/content/city-mega-pack)"__ sprite sheets by __[GrafxKid](https://opengameart.org/users/grafxkid)__, edited in Adobe Photoshop
 
 ## <a name="Bugs"></a>Known Bugs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Known Bugs_
