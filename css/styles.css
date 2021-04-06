@@ -31,7 +31,7 @@ main {
   /* width: 20vw; */
   width: 640px;
   height: 640px;
-  background-image: url("../img/Backdrop02.png");
+  background-image: url("../img/Backdrop03.png");
 }
 
 h2 {
@@ -41,6 +41,17 @@ h2 {
 
 div#settings {
   display: none;
+}
+
+button#settings {
+  width: 52px;
+  height: 48px;
+  position: absolute;
+  left: 280px;
+  bottom: 200px;
+  background-color: #ff000000;
+  font-size: 48px;
+  line-height: 48px;
 }
 
 button {
