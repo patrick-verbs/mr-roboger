@@ -40,7 +40,7 @@ h2 {
   padding: 16px;
 }
 
-input {
+input#count {
   background-color: #ff000000;
   border: none;
   margin: -32px 0 0 128px;
@@ -50,8 +50,27 @@ input {
   width: 200px;
 }
 
+input.digitInput {
+  background-color: #ffffff80;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 12px;
+  width: 32px;
+}
+
+input.valueInput {
+  background-color: #ffffff80;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 12px;
+  width: 240px;
+}
+
 div#settings {
   display: none;
+  margin: 0 0 0 16px;
 }
 
 button#settings {
@@ -68,10 +87,6 @@ button#settings {
 button {
   background-color: #00000000;
   border: none;
-}
-
-input.valueInput {
-  width: 320px;
 }
 
 #roboCounter {
