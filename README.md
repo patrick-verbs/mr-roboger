@@ -46,6 +46,7 @@ This project's repository and contained source is available under the MIT Licens
   - __[Spriteling](https://github.com/filidorwiese/spriteling)__ by Filidor Wiese
 - __CSS3__ with __[Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)__
 - __"[Green Robot](https://opengameart.org/content/green-robot)"__ and __"[City Mega Pack](https://opengameart.org/content/city-mega-pack)"__ sprite sheets by __[GrafxKid](https://opengameart.org/users/grafxkid)__, edited in Adobe Photoshop
+- __[Mario Kart DS font](https://www.dafont.com/mario-kart-ds.font)__ recreated by __[David at dafont.com](https://www.dafont.com/profile.php?user=736583)__
 
 ## <a name="Bugs"></a>Known Bugs
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Known Bugs_
