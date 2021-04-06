@@ -82,8 +82,6 @@ $(document).ready(function() {
   })
 
   $("form#formOne").submit(function(event) {
-    // Prevent the form data from being pushed to a server,
-    // since all data is being handled here in JS/CSS/HTML:
     event.preventDefault()
 
     robot.play('sleep', {
@@ -144,7 +142,7 @@ $(document).ready(function() {
       } else {
         $(pCount).append("<br>")
         i++
-      }
+      }// 8000 ms delay times well with the "wakeUp" animation
       $(pCount).hide().delay( 8000 + (750 * (i + 1)) ).fadeIn()
       $(pCount).delay(3000).fadeOut()
     }
