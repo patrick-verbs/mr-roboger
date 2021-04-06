@@ -41,7 +41,7 @@ function replaceNumbersIfDigit(numberArray, targetDigit, newValue) {
 ///////////////////////
 $(document).ready(function() {
 
-  // Spriteling.js
+  // Spriteling.js setup
   let robot = new Spriteling({
     url: 'img/128px-Green_Robot_by_GrafxKid.png',
     bottom: 86,
@@ -79,6 +79,13 @@ $(document).ready(function() {
   robot.play('sleep', {
     run: -1,
     delay: 100
+  })
+
+  // Settings DIV toggle
+  const settingsDiv = $("div#settings")
+  const settingsButton = $("button#settings")
+  settingsButton.click(function() {
+    settingsDiv.toggle()
   })
 
   $("form#formOne").submit(function(event) {
