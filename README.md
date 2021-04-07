@@ -23,7 +23,12 @@ This project was initially created as an assignment. The goal was to demonstrate
 
 ## <a name="Description"></a>Description
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Description_
-This project was initially created as an assignment. The goal was to demonstrate proficiency in Test-Driven Development and the use of arrays and loops in JavaScript.
+"Mr. Roboger's Neighborhood" was required to take an input number from a user, then count upward from zero to that number. Along the way, _Mr. Roboger_ (or Mr. Roboger_s_, depending on interpretation of an apostrophe in the assignment!) is supposed to interject by replacing all numbers containing the digit 1 (e.g. 1, 10, 11, 100) with the text "Beep!" &mdash; and all numbers containing a 2 with "Boop!", and all those with a 3 with "Won't you be my neighbor?"
+
+I needed more practice separating logic, so I had all the above rules set as default values and generalized the function so users could change which digits are searched for (instead of just 1, 2, and 3) as well as change Mr. Roboger's responses :)
+
+And then I decided I wanted to add animated sprites, and went down a rabbit-hole the weekend after the assignment was submitted...<br>
+<img src="img/128px-Green_Robot_by_GrafxKid.png" alt="A spritesheet depicting a green robot in various positions" width="25%">
 
 ## <a name="Install"></a>Installation & Setup
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Installation & Setup_
@@ -40,7 +45,6 @@ This project's repository and contained source is available under the MIT Licens
 
 ## <a name="Technologies"></a>Technologies Used
 ###### _[Mr. Roboger](https://github.com/patrick-verbs/mr-roboger) > [About](#About) > Technologies Used_
-- 
 - __HTML5__
 - __JavaScript__ with __[jQuery v. 3.6.0](https://jquery.com/)__
   - __[Spriteling](https://github.com/filidorwiese/spriteling)__ by Filidor Wiese
